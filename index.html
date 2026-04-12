@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>April 2026 General Conference + Relevant Life Helps</title>
+<style>
+  :root {
+    --bg: #f1f1f1;
+    --card-border: #d0d0d0;
+    --text: #2c2c2c;
+    --muted: #4b4b4b;
+    --speaker: #9d355c;
+    --link: #222;
+    --lifehelp: #5b5b5b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 10px 40px 48px;
+  }
+  .page-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 42px;
+  }
+  .session-label {
+    font-weight: 300;
+    font-size: 1.06rem;
+    letter-spacing: .02em;
+    color: #707070;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+  .session-title {
+    font-weight: 300;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 0 0 22px;
+    color: #333;
+  }
+  .tile {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 18px 0 24px;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .tile img {
+    width: 140px;
+    height: 79px;
+    object-fit: cover;
+    display: block;
+    background: #ddd;
+  }
+  .speaker {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: var(--speaker);
+    margin: 0 0 4px;
+    letter-spacing: .01em;
+  }
+  .talk-title {
+    font-size: 1.05rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .talk-title a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .talk-title a:hover {
+    text-decoration: underline;
+  }
+  .description {
+    font-size: 0.93rem;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0;
+  }
+  .life-help {
+    margin-top: 10px;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--lifehelp);
+  }
+  .life-help strong {
+    color: #454545;
+  }
+  .life-help a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .life-help a:hover {
+    border-bottom-color: #666;
+  }
+  .session-card .talk-title {
+    margin-top: 4px;
+  }
+  .footer-note {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #767676;
+    line-height: 1.5;
+  }
+  @media (max-width: 640px) {
+    .page { padding: 14px 18px 36px; }
+    .page-title { font-size: 2.65rem; margin-bottom: 28px; }
+    .session-title { font-size: 1.8rem; }
+    .tile {
+      grid-template-columns: 110px 1fr;
+      gap: 14px;
+      padding: 16px 0 22px;
+    }
+    .tile img {
+      width: 110px;
+      height: 62px;
+    }
+  }
+  @media (max-width: 450px) {
+    .tile {
+      grid-template-columns: 1fr;
+    }
+    .tile img {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="page" id="app"></main>
+
+<script>
+const conferenceData = [{"session": "Saturday Morning Session", "items": [{"speaker": "", "title": "Saturday Morning Session", "description": "The Saturday morning session of the 196th annual general conference of The Church of Jesus Christ of Latter-day Saints held on April 4–5, 2026.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/saturday-morning-session?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/k1fqj0dhdmlvazviec1fi2d8vug406va413iel1a/full/%21200%2C/0/default", "life_topics": []}, {"speaker": "Dallin H. Oaks", "title": "Introduction", "description": "President Oaks explains that in a solemn assembly, members of the Church vote to sustain members of the First Presidency and the Quorum of the Twelve Apostles.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/11oaks?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/7di4rmbr3hvv44bdpgjvnnrxia7wajz5jbuqr7c3/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}]}, {"speaker": "D. Todd Christofferson", "title": "Solemn Assembly", "description": "In a solemn assembly, President Christofferson presents the names of the First Presidency and Quorum of the Twelve Apostles for sustaining votes.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/12christofferson?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/xqyajds142unpme5guheyw1u6v3375djpgaw63sg/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}]}, {"speaker": "Patrick Kearon", "title": "About His Business", "description": "Elder Kearon teaches that callings from the Lord are tailor-made for our growth and that when we respond to a call, we don’t merely fill an assignment but join the Saviour in His redeeming work.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/13kearon?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/1yhzl9w6fcm7at7lutnmp4dq29bupz35kxne4fwu/full/%21200%2C/0/default", "life_topics": [{"title": "Self-Reliance Services", "url": "https://www.churchofjesuschrist.org/life/self-reliance?lang=eng"}, {"title": "Employment", "url": "https://www.churchofjesuschrist.org/life/employment-services?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}]}, {"speaker": "Kristin M. Yee", "title": "Ministering—“That Ye Love One Another; as I Have Loved You”", "description": "Sister Yee describes how Jesus Christ ministered and testifies of the blessings of ministering in His way.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/14yee?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/71a8ios5dh7jmcbcmrh6by1aeybj2w76lwz2c2ny/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Clark G. Gilbert", "title": "Come Home", "description": "Elder Gilbert shares examples of people who found their way back to the gospel of Jesus Christ and teaches that Christ will help all to “come home.”", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/15gilbert?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/kuukt6mdqdzjd6fgmcwng1ozledfy60s83ba9rfb/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Addiction", "url": "https://www.churchofjesuschrist.org/study/life-help/addiction?lang=eng"}]}, {"speaker": "David A. Bednar", "title": "All Who Have Endured Valiantly", "description": "Elder Bednar teaches that enduring valiantly to the end means becoming more like Christ as we practice charity throughout our lives.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/16bednar?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/ibjynpzh92ctp5jb5d52w0litgecjiwn56afk26y/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}]}, {"speaker": "Michael John U. Teh", "title": "Follow the Prophet; He Knows the Way", "description": "Elder Teh teaches that following the teachings and example of prophets, seers, and revelators can help us come closer to Jesus Christ.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/17teh?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/srs63hh3q0vztdywcb3gvbsuyadw5c88y9ktquvr/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Jorge T. Becerra", "title": "Tithing—Putting God First", "description": "Elder Becerra teaches that we can put God first by obeying the law of tithing.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/18becerra?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/vhim4s8mgfwn4545eb0ocmrzqypgqr4diifdgxvz/full/%21200%2C/0/default", "life_topics": [{"title": "Finances", "url": "https://www.churchofjesuschrist.org/study/manual/finances/finances?lang=eng"}, {"title": "Self-Reliance Services", "url": "https://www.churchofjesuschrist.org/life/self-reliance?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}]}, {"speaker": "Henry B. Eyring", "title": "Prayers for Peace", "description": "President Eyring teaches that turning to Heavenly Father in fervent prayer will bring peace and abiding support.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/19eyring?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/4kn8jwxcclgtvtatkug9j7n13gde8s1289ztxasj/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}]}]}, {"session": "Saturday Afternoon Session", "items": [{"speaker": "", "title": "Saturday Afternoon Session", "description": "The Saturday afternoon session of the 196th annual general conference of The Church of Jesus Christ of Latter-day Saints held on April 4–5, 2026.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/saturday-afternoon-session?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/nckrs96uenypiu8r237oa3c3kd9brvo8tvhbgsms/full/%21200%2C/0/default", "life_topics": []}, {"speaker": "D. Todd Christofferson", "title": "Sustaining of General Authorities, Area Seventies, and General Officers", "description": "President Christofferson presents the General Authorities, Area Seventies, and General Officers of The Church of Jesus Christ of Latter-day Saints for a sustaining vote.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/21christofferson?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/agcwcjldr8f4q65c9q7h0f3c7ypdwiotbk4z5q77/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}]}, {"speaker": "Jared B. Larson", "title": "Church Auditing Department Report, 2025", "description": "Jared B. Larson shares the Church Auditing Department Report for 2025.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/22larson?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/3l5f4n08254kvtdc8hxmao7l0ku2mmdit925gjug/full/%21200%2C/0/default", "life_topics": [{"title": "Self-Reliance Services", "url": "https://www.churchofjesuschrist.org/life/self-reliance?lang=eng"}, {"title": "Finances", "url": "https://www.churchofjesuschrist.org/study/manual/finances/finances?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Gary E. Stevenson", "title": "Lost Luggage, Redeemed Souls", "description": "Elder Stevenson teaches that we can help each other return safely to God as we serve in ministering assignments and nurture the rising generation.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/23stevenson?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/tlg0niclvq5p4t0vl97dz4wtqoa8ev2qv2w0gkxy/full/%21200%2C/0/default", "life_topics": [{"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}]}, {"speaker": "Eduardo F. Ortega", "title": "Christ—Author and Finisher of Our Faith", "description": "Elder Ortega teaches that becoming a lifelong disciple of Jesus Christ is a process of daily personal and spiritual events.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/24ortega?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/sesoks1mgm4a8vgo42nfp8snd94bq243rn5h847y/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}, {"title": "Self-Reliance Services", "url": "https://www.churchofjesuschrist.org/life/self-reliance?lang=eng"}]}, {"speaker": "Wan-Liang Wu", "title": "“I Will Give Away All My Sins to Know Thee”", "description": "Elder Wu teaches that coming unto Christ is more than just learning of Christ. It includes faith, repentance, and conversion.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/25wu?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/uscw724r8zqekmjr7ost6ryniu91bijxyd8tt5ml/full/%21200%2C/0/default", "life_topics": [{"title": "Addiction", "url": "https://www.churchofjesuschrist.org/study/life-help/addiction?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "David J. Wunderli", "title": "Jesus Christ Is Not Our Burden; He Is Our Relief", "description": "Brother Wunderli teaches that Jesus Christ brings relief and eases our burdens.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/26wunderli?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/7nk7lbkcd7lazs3w6ltjoo8jh8u63xdtduxke4dx/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Physical Health", "url": "https://www.churchofjesuschrist.org/life/physical-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Gérald Caussé", "title": "Love All; Love Each", "description": "Elder Caussé teaches that as disciples of Jesus Christ, we bear witness of Him whenever we share His love with all around us—and help it take root in each person we meet.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/27causse?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/oj5yyiglixvzren591kjnk7usz9jt6ovstl9jdww/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Brian J. Holmes", "title": "Jesus Christ Is the Way", "description": "Elder Holmes teaches that the only way to eternal life is to have faith in Jesus Christ and follow Him and His servants on the covenant path.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/28holmes?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/8kxhbafstla1u6vilocg3rgkn1nmf613yjxl3eg2/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Clement M. Matswagothata", "title": "He Knows You by Name", "description": "Elder Matswagothata teaches that the Savior knows us by name and will guide us through every season of life.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/29matswagothata?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/simzeu8kaytlkrz9v4u3pz63rhw09ajcquuenc8e/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}]}, {"speaker": "Ulisses Soares", "title": "Jesus Christ—the True Vine", "description": "Elder Soares explains how Jesus Christ is like a vine that gives us spiritual nourishment as we choose to abide in Him.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/210soares?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/m1ochv2jv1251c0asnt4c8oc6nw1hchbs1qiz8xd/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Physical Health", "url": "https://www.churchofjesuschrist.org/life/physical-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}]}, {"session": "Sunday Morning Session", "items": [{"speaker": "", "title": "Sunday Morning Session", "description": "The Sunday morning session of the 196th annual general conference of The Church of Jesus Christ of Latter-day Saints held on April 4–5, 2026.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/sunday-morning-session?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/11davakk1dwngjfjgwamrtqcfo25kp7vbcqvtmcz/full/%21200%2C/0/default", "life_topics": []}, {"speaker": "Dieter F. Uchtdorf", "title": "Encounter at the Empty Tomb", "description": "President Uchtdorf teaches about the women who first saw the empty tomb and bore witness of Christ’s Resurrection and invites all of us to have a similar spiritual encounter and testimony.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/41uchtdorf?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/tx9vqk3zs2eoylb8q1lnazdbg5uol5lzih4e4yfl/full/%21200%2C/0/default", "life_topics": [{"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Emily Belle Freeman", "title": "Best Days and Worst Days", "description": "President Freeman testifies that on our best days and on our worst days, we can receive strength as we walk with Christ and hold fast to His eternal truths.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/42freeman?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/qhemwyu8ehx1ujciyb9b8sk3xjqt6re45uylvymz/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Physical Health", "url": "https://www.churchofjesuschrist.org/life/physical-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Pedro X. Larreal", "title": "I Feel My Savior’s Love", "description": "Elder Larreal teaches that the sacrament is a reminder of the great love Christ has for us.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/43larreal?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/1n0y9vuswwuo7svar9y85e3fjh2bocxytf7erms1/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Edward B. Rowe", "title": "Choose Jesus Christ as Your Guide", "description": "Elder Rowe teaches that Jesus Christ can guide us through life’s journey as we listen to His Spirit.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/44rowe?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/zpn53xdxlezatnixmtl4h5kcy56f6yo7hwq4cdio/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Ronald A. Rasband", "title": "He Is Risen", "description": "Elder Rasband shares the accounts of Jesus Christ’s Resurrection in the Bible and Book of Mormon, along with His own witness as an Apostle.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/45rasband?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/eh9rufgf90el7s0s7kec3mgx3sf1prcazte5wbvz/full/%21200%2C/0/default", "life_topics": [{"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Dale G. Renlund", "title": "Because of Jesus Christ", "description": "Elder Renlund teaches that focusing on Jesus Christ and His Atonement will bring joy and clarity to our lives.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/46renlund?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/jb5uzfe7pvy1z9z4205qd5xcyenfswz0aum0iz95/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}]}, {"speaker": "Thierry K. Mutombo", "title": "The Joy of a Covenant Relationship with God", "description": "Elder Mutombo describes how Heavenly Father extends His love to us through the Atonement of Jesus Christ and our covenants with Him.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/47mutombo?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/londltgjdry709r2cr7satoqwl5srrewtys64ahe/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Alan R. Walker", "title": "A Peculiar Treasure", "description": "Elder Walker teaches that we can be a peculiar treasure to the Lord if we obey His voice and keep His covenant.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/48walker?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/kyixqx93kbk4wzcis7wh5ksdnnesr5w0zkl5ykzj/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}]}, {"speaker": "Dallin H. Oaks", "title": "Alive in Christ", "description": "President Oaks teaches us to avoid contention, to be peacemakers, and to strive to be holy.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/49oaks?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/zomba0e1oove1nvezn7lsb9l6hgfxkxbgnx2xbsa/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}]}, {"session": "Sunday Afternoon Session", "items": [{"speaker": "", "title": "Sunday Afternoon Session", "description": "The Sunday afternoon session of the 196th annual general conference of The Church of Jesus Christ of Latter-day Saints held on April 4–5, 2026.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/sunday-afternoon-session?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/llvxj78zqv5a6sz5sm3fyhnetpq5tojsi64627jy/full/%21200%2C/0/default", "life_topics": []}, {"speaker": "D. Todd Christofferson", "title": "The Character of Christ", "description": "President Christofferson teaches that emulating the character of Christ will help us become who we need to be.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/51christofferson?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/wbxbxpfo4o1gx9hx7jmu9fe6im809oz87b00fk3f/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Chi Hong (Sam) Wong", "title": "Remember, Remember", "description": "Using five scriptures from the Book of Mormon, Elder Wong shares what God wants us to remember.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/52wong?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/95muj48egmb0jjlqvlc1wtgyq8dqh91i4lygt6gu/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Aaron T. Hall", "title": "I Glory in My Jesus", "description": "Elder Hall teaches about the mercy, love, and saving power of Jesus Christ.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/53hall?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/k9isuaoeee0fedf2zilx4g68pjm1aqj9m66blkzf/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Susan H. Porter", "title": "“Here Am I, Send Me”", "description": "President Porter teaches that, like the boy who shared his loaves and fishes, children can make a difference.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/54porter?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/cgkpdffa2eoqnwn5zp07g1hu8rdkceard64ewghj/full/%21200%2C/0/default", "life_topics": [{"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}]}, {"speaker": "Neil L. Andersen", "title": "Eternal Marriage Is an Eternal Journey", "description": "Elder Andersen teaches about the responsibilities and blessings of the marriage covenant.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/55andersen?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/927lkm4ne7lsq5fcz35skzls2twyozogz21mqm1w/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}, {"title": "Single-Parent Families", "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/single-parent-families?lang=eng"}]}, {"speaker": "Quentin L. Cook", "title": "Keys, Covenants, and Easter", "description": "Elder Cook teaches that the appearance of the Savior to the Prophet Joseph Smith and the keys committed by Moses, Elias, and Elijah are central to the Restoration of the gospel of Jesus Christ.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/56cook?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/rt8bdb264fmf2d2yatr13p5z9enzs6gkl1yzedng/full/%21200%2C/0/default", "life_topics": [{"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}]}, {"speaker": "Taniela B. Wakolo", "title": "Come unto Christ—Together", "description": "Elder Wakolo teaches that as we are faithful and patient in our discipleship, the Lord will fulfill His promises.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/57wakolo?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/76fijcyeqv4qixgr4hrh6tnf3rk7l2jlnjj19tb0/full/%21200%2C/0/default", "life_topics": [{"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}, {"speaker": "Gerrit W. Gong", "title": "’Tis Eastertide: No One Walks Alone", "description": "Elder Gong teaches that as we faithfully keep our covenants, we will come to know Jesus Christ and He will abide with us.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/58gong?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/eaatubntp206iwnupdvtpqs9e9320s3f9zlshc0t/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Family and Relationships", "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"}, {"title": "Death, Grief, and Loss", "url": "https://www.churchofjesuschrist.org/study/manual/death/death?lang=eng"}]}, {"speaker": "Dallin H. Oaks", "title": "Closing Remarks", "description": "President Oaks teaches that as we focus on Jesus Christ and study the teachings from conference, we will receive personal revelation and guidance.", "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/04/59oaks?lang=eng", "img": "https://www.churchofjesuschrist.org/imgs/75oyrny2cw3zko3pvfxm6hlapg5e29nljs7uiew7/full/%21200%2C/0/default", "life_topics": [{"title": "Mental and Emotional Health", "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"}, {"title": "Preparedness", "url": "https://www.churchofjesuschrist.org/life/temporal-preparedness-resources?lang=eng"}, {"title": "Parenting", "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"}]}]}];
+
+function escapeHtml(str) {
+  return str
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderLifeTopics(topics) {
+  if (!topics || !topics.length) return '';
+  const links = topics.map(t => `<a href="${t.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.title)}</a>`).join(' | ');
+  return `<div class="life-help"><strong>Relevant Life Helps:</strong> ${links}</div>`;
+}
+
+function renderTile(item, isSessionCard = false) {
+  const speaker = item.speaker ? `<p class="speaker">${escapeHtml(item.speaker)}</p>` : '';
+  const titleLink = item.href
+    ? `<a href="${item.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>`
+    : escapeHtml(item.title);
+  return `
+    <article class="tile ${isSessionCard ? 'session-card' : ''}">
+      <div class="image-wrap">
+        <img src="${item.img || ''}" alt="${escapeHtml(item.title)}" loading="lazy">
+      </div>
+      <div class="content">
+        ${speaker}
+        <h3 class="talk-title">${titleLink}</h3>
+        <p class="description">${escapeHtml(item.description)}</p>
+        ${renderLifeTopics(item.life_topics)}
+      </div>
+    </article>
+  `;
+}
+
+function render() {
+  const app = document.getElementById('app');
+  let html = `<h1 class="page-title">April 2026 general conference</h1>`;
+  conferenceData.forEach(section => {
+    html += `
+      <section class="session">
+        <div class="session-label">Session</div>
+        <h2 class="session-title">${escapeHtml(section.session)}</h2>
+        ${renderTile(section.items[0], true)}
+        ${section.items.slice(1).map(item => renderTile(item)).join('')}
+      </section>
+    `;
+  });
+  html += `<p class="footer-note">Relevant Life Helps selections were matched to each talk’s title and summary to provide practical companion resources for class discussion and personal study.</p>`;
+  app.innerHTML = html;
+}
+
+render();
+</script>
+
+<hr>
+<section>
+  <h2>Life Helps Usage Summary</h2>
+  <ul>
+    <li>Mental and Emotional Health — 33</li>
+    <li>Family and Relationships — 31</li>
+    <li>Parenting — 18</li>
+    <li>Death, Grief, and Loss — 9</li>
+    <li>Preparedness — 7</li>
+    <li>Self-Reliance Services — 4</li>
+    <li>Physical Health — 3</li>
+    <li>Addiction — 2</li>
+    <li>Finances — 2</li>
+    <li>Employment — 1</li>
+    <li>Single-Parent Families — 1</li>
+  </ul>
+</section>
+</body>
+
+</html>
