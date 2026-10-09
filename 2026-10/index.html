@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>October 2026 general conference + Relevant Life Helps</title>
+<style>
+  :root {
+    --bg: #f1f1f1;
+    --card-border: #d0d0d0;
+    --text: #2c2c2c;
+    --muted: #4b4b4b;
+    --speaker: #9d355c;
+    --link: #222;
+    --lifehelp: #5b5b5b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 10px 40px 48px;
+  }
+  .page-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 42px;
+  }
+  .back-link {
+    display: inline-block;
+    margin: 18px 0 14px;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+  }
+  .back-link:hover { text-decoration: underline; }
+  .session-label {
+    font-weight: 300;
+    font-size: 1.06rem;
+    letter-spacing: .02em;
+    color: #707070;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 10px;
+  }
+  .session-title {
+    font-weight: 300;
+    font-size: 2.1rem;
+    line-height: 1.15;
+    margin: 0 0 22px;
+    color: #333;
+  }
+  .tile {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 18px 0 24px;
+    border-bottom: 1px solid var(--card-border);
+  }
+  .tile img {
+    width: 140px;
+    height: 79px;
+    object-fit: cover;
+    display: block;
+    background: #ddd;
+  }
+  .speaker {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    color: var(--speaker);
+    margin: 0 0 4px;
+    letter-spacing: .01em;
+  }
+  .talk-title {
+    font-size: 1.05rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+  .talk-title a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .talk-title a:hover {
+    text-decoration: underline;
+  }
+  .description {
+    font-size: 0.93rem;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0;
+  }
+  .life-help {
+    margin-top: 10px;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: var(--lifehelp);
+  }
+  .life-help strong {
+    color: #454545;
+  }
+  .life-help a {
+    color: #666;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+  .life-help a:hover {
+    border-bottom-color: #666;
+  }
+  .session-card .talk-title {
+    margin-top: 4px;
+  }
+  .footer-note {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #767676;
+    line-height: 1.5;
+  }
+  @media (max-width: 640px) {
+    .page { padding: 14px 18px 36px; }
+    .page-title { font-size: 2.65rem; margin-bottom: 28px; }
+    .session-title { font-size: 1.8rem; }
+    .tile {
+      grid-template-columns: 110px 1fr;
+      gap: 14px;
+      padding: 16px 0 22px;
+    }
+    .tile img {
+      width: 110px;
+      height: 62px;
+    }
+  }
+  @media (max-width: 450px) {
+    .tile {
+      grid-template-columns: 1fr;
+    }
+    .tile img {
+      width: 100%;
+      max-width: 160px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="page" id="app"></main>
+
+<script>
+const pageTitle = "October 2026 general conference";
+const footerNote = "Relevant Life Helps were chosen by reading each talk and matching it to resources on the Church’s Help & Resources for Life’s Challenges page. Talks without a clear match are left without links.";
+const conferenceData = [
+ {
+  "session": "Saturday Morning Session",
+  "items": [
+   {
+    "speaker": "",
+    "title": "Saturday Morning Session",
+    "description": "The Saturday morning session of the 196th Semiannual General Conference of The Church of Jesus Christ of Latter-day Saints held on October 3–4, 2026.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/saturday-morning-session?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/kehy7z9gjwjgtew9zssmf78h18cflm6j4rie6wh0/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Gerrit W. Gong",
+    "title": "Come to the Lord in His Holy House",
+    "description": "Elder Gong shares foundational doctrine about the house of the Lord that can enrich our personal temple culture.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/12gong?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/dyyxwat4y9llj75szsedz1jfp94dvfkt25ll03j7/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     },
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Tamara W. Runia",
+    "title": "The Sculpting of Our Souls",
+    "description": "Sister Runia teaches that God is intimately aware of your experience and has a plan for you.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/13runia?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/cbus7866njtxoro6ew13u8nl8ptwndfj79p36aqr/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Death, Grieving, and Loss",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/death-physical?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Gérald Caussé",
+    "title": "The Gift of Testimony",
+    "description": "Elder Caussé teaches that a testimony of Jesus Christ is a personal gift of the Spirit and that we should each seek opportunities to share it.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/14causse?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/5a3ecwy7trqugcedjaymukrws2b45brymd54uygp/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Vaiangina Sikahema",
+    "title": "Prophets, Seers, and Revelators",
+    "description": "Elder Sikahema teaches how important it is to listen to and follow the words of our prophets and apostles.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/15sikahema?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/trzqnkoyl8a04dfddcuf7sfsrl3czinc8rfq7d9k/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Kevin J. Hathaway",
+    "title": "Jesus Christ Is the Great Deliverer!",
+    "description": "Elder Hathaway teaches that if we turn to Jesus Christ, He can deliver us from our afflictions.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/16hathaway?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/tgu0r3t7mwn4fy435cq0iicnz47i0bb7uemwt2wd/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     },
+     {
+      "title": "Death, Grieving, and Loss",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/death-physical?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Ulisses Soares",
+    "title": "A Higher and Holier Fast",
+    "description": "Elder Soares teaches that observing the law of the fast is an act of worship that shapes and refines our discipleship and draws us closer to the Lord.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/17soares?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/nfpww4884omd59415p5uc3ca3l6d4sc81x68qcno/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Meeting Physical Needs",
+      "url": "https://www.churchofjesuschrist.org/life/meeting-physical-needs?lang=eng"
+     },
+     {
+      "title": "Bishops’ Storehouses",
+      "url": "https://www.churchofjesuschrist.org/life/bishops-storehouse?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Sean Douglas",
+    "title": "The Hour of Your Mission Is Come",
+    "description": "Bishop Douglas invites the rising generation to follow the counsel of modern prophets and serve missions.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/18douglas?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/yb9qix9s44drj24o1kndtnhj8qj2my6iat3bic70/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "D. Todd Christofferson",
+    "title": "O Be Wise",
+    "description": "President Christofferson teaches about the dangers of gambling and encourages us to use our time to do good.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/19christofferson?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/txqeomq62nwbwudau19xvj4bblfatemcb6433p66/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Addiction",
+      "url": "https://www.churchofjesuschrist.org/study/life-help/addiction?lang=eng"
+     },
+     {
+      "title": "Addiction Recovery Program",
+      "url": "https://addictionrecovery.churchofjesuschrist.org/"
+     },
+     {
+      "title": "Finances",
+      "url": "https://www.churchofjesuschrist.org/life/finances?lang=eng"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "session": "Saturday Afternoon Session",
+  "items": [
+   {
+    "speaker": "",
+    "title": "Saturday Afternoon Session",
+    "description": "The Saturday afternoon session of the 196th Semiannual General Conference of The Church of Jesus Christ of Latter-day Saints held on October 3–4, 2026.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/saturday-afternoon-session?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/7eko0mkmmx7kh3215pdzibhq972cl3n27i2wa0rr/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Dale G. Renlund",
+    "title": "“How Long Will It Be Ere They Believe Me?”",
+    "description": "Elder Renlund teaches that remembering God’s goodness and trusting His promises can help us find joy and peace through Jesus Christ, even amid life’s challenges.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/21renlund?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/jpqrdgvpp99wnllcsylkjl3hqw0z5dovsgmg0gf9/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Timothy L. Farnes",
+    "title": "Divine Appointments",
+    "description": "President Farnes teaches that as covenant followers of Jesus Christ, we should see the person before us with compassion rather than judgment and then act.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/22farnes?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/9dst95tzo4w0ue6zg802noyeo4ag83bigiisz0pw/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Christian C. Chigbundu",
+    "title": "Spiritual Immunity",
+    "description": "Elder Chigbundu teaches that scripture study, prayer, the sacrament, and covenants can help us withstand life’s challenges.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/23chigbundu?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/k0ow80lg6obbx3jp5g3wrz8g7wz0uti57b32chna/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Patricio M. Giuffra",
+    "title": "Trusting the Lord Through Tithes and Offerings",
+    "description": "Elder Giuffra teaches about the blessings of obeying the law of tithing, even in difficult financial circumstances.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/24giuffra?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/sgsp8cjbqc4adurwslvkq4eso6zkojluq4j8vi8n/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Finances",
+      "url": "https://www.churchofjesuschrist.org/life/finances?lang=eng"
+     },
+     {
+      "title": "Self-Reliance",
+      "url": "https://www.churchofjesuschrist.org/life/self-reliance?lang=eng"
+     },
+     {
+      "title": "Preparing for the Future",
+      "url": "https://www.churchofjesuschrist.org/life/preparing-for-the-future?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Jeremiah J. Morgan",
+    "title": "The Infinite Power of God in Our Covenants",
+    "description": "Elder Morgan teaches that covenants with God have great power and affect not only us but also our posterity across generations.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/25morgan?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/hn62u1moi9geao7fl4v38p3ooddw4rhuc58o5yst/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Parenting",
+      "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"
+     },
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Hutch U. Fale",
+    "title": "I Am a Child of God",
+    "description": "Elder Fale teaches that we are all beloved children of God and we will be blessed as we follow His plan.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/26fale?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/7q9t0rzx9w6erzf41tkgqtuo4orcovg4qi0ownk6/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     },
+     {
+      "title": "Parenting",
+      "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Patrick Kearon",
+    "title": "Jesus Lives to Lift",
+    "description": "Elder Kearon teaches that Jesus Christ will be our spiritual lift as we turn to Him.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/27kearon?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/uyqg7hvi75v79i7hi5qghe6dhjskbdfwtifs1je6/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Michael A. Dunn",
+    "title": "The Ninety and Ten",
+    "description": "Using the story of a friend helping him finish a race, Elder Dunn testifies of the ways Jesus Christ ministers to us in the journey of life.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/28dunn?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/cdmu12k5jwzuwxx9ajxhz7ny0tirizapif5ko2a5/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     },
+     {
+      "title": "Mental Health",
+      "url": "https://www.churchofjesuschrist.org/study/life-help/mental-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Matthew J. Eyring",
+    "title": "Comfort from the Holy Ghost",
+    "description": "Elder Eyring teaches that as we turn to Jesus Christ, we can receive peace, hope, and comfort through the Holy Ghost.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/29eyring?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/v9kudwog41uz4ch7kxw6ej1opr0sc2s3vzt2924s/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Death, Grieving, and Loss",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/death-physical?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Ronald A. Rasband",
+    "title": "Love Like Jesus",
+    "description": "Elder Rasband teaches that those with wayward children should turn their feelings of despair over to Jesus Christ, since He is the one who can change the hearts of those who have gone astray.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/210rasband?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/d5mdahkbt9iy43lzgyw8zrg7bk3kd4p9nnwja01w/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     },
+     {
+      "title": "Parenting",
+      "url": "https://www.churchofjesuschrist.org/life/parenting?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "session": "Sunday Morning Session",
+  "items": [
+   {
+    "speaker": "",
+    "title": "Sunday Morning Session",
+    "description": "The Sunday morning session of the 196th Semiannual General Conference of The Church of Jesus Christ of Latter-day Saints held on October 3–4, 2026.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/sunday-morning-session?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/aloc9kero97amoqc5l4z6s83l7308g7eaw8k0fz8/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Henry B. Eyring",
+    "title": "“Fear Not, I Am with Thee”",
+    "description": "President Eyring teaches that our loving Heavenly Father will help us during our challenges.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/41eyring?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/10p7l9hersauqflvv7t37ewtd6hmy2kh7sjlsmp4/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Rosemary K. Chibota",
+    "title": "A Child of God",
+    "description": "President Chibota invites us to see others as children of God and to treat them as He would.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/42chibota?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/p34ijilcy3uo1040md2zqldvfhpmbbivskx0c9ms/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     },
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Neil L. Andersen",
+    "title": "Courage Born of Our Faith in Jesus Christ",
+    "description": "Elder Andersen shares many examples of people who had the courage to manifest their faith in Jesus Christ.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/43andersen?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/sbidhv7clzobaikdb80pjh3znzmrbj5nzny4vzmh/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Media Safety",
+      "url": "https://www.churchofjesuschrist.org/study/manual/media-safety?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "James G. O. Fantone",
+    "title": "Take Upon Us His Name",
+    "description": "Elder Fantone teaches that taking the Savior’s name upon us means covenanting to serve Him and our fellow beings throughout our lives.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/44fantone?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/yjys0lmjmf8nztylxm83v1w3dtggezzey6awhv5m/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Edward Dube",
+    "title": "Come unto Christ",
+    "description": "Elder Dube teaches that we can invite people to come unto Christ and do their best so that He can perfect them through His grace.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/45dube?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/7u7m4s790eo2gd2wfv8xwrsimoampzf77dz90fyq/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Addiction",
+      "url": "https://www.churchofjesuschrist.org/study/life-help/addiction?lang=eng"
+     },
+     {
+      "title": "Addiction Recovery Program",
+      "url": "https://addictionrecovery.churchofjesuschrist.org/"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Quentin L. Cook",
+    "title": "Integrity and Virtue Lead to Happiness",
+    "description": "Elder Cook teaches that lifelong disciples of Jesus Christ best reflect the Savior’s teaching and direction when they joyfully live lives of integrity and virtue.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/46cook?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/lueo36yb85l2147tk4d0v79c1uvyyxckbq1uvkw4/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Media Safety",
+      "url": "https://www.churchofjesuschrist.org/study/manual/media-safety?lang=eng"
+     },
+     {
+      "title": "Developing Healthy Habits for Growth",
+      "url": "https://www.churchofjesuschrist.org/life/developing-habits-for-growth?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Alfred Kyungu",
+    "title": "Using the Language of Peacemakers",
+    "description": "Elder Kyungu teaches that we can be peacemakers by using language that is kind and respectful.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/47kyungu?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/n17wtc3cdx1e6zc5lm12ot4nqmucndao15uag0iv/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     },
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Ciro Schmeil",
+    "title": "Consider Your Ways, and from This Day Will the Lord Bless You",
+    "description": "Elder Schmeil teaches that our Savior and our covenants are essential to guide us through the covenant path and help us overcome our challenges and weaknesses.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/48schmeil?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/k9qbme2qqz1uzrgao8qehp919d4umyxdv227akih/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Dallin H. Oaks",
+    "title": "The Gospel of Jesus Christ Is for All",
+    "description": "President Oaks teaches that the gospel of Jesus Christ is for all people and encourages us to come unto Christ and trust in His promises.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/49oaks?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/dm63hd99dmbxkmx1jyyz8jfwz17b9qeb403296hq/full/%21200%2C/0/default",
+    "life_topics": []
+   }
+  ]
+ },
+ {
+  "session": "Sunday Afternoon Session",
+  "items": [
+   {
+    "speaker": "",
+    "title": "Sunday Afternoon Session",
+    "description": "The Sunday afternoon session of the 196th Semiannual General Conference of The Church of Jesus Christ of Latter-day Saints held on October 3–4, 2026.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/sunday-afternoon-session?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/cpxhfqwixrumtk5bhf5jpzoexuyw6r6rzvt83ths/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Dieter F. Uchtdorf",
+    "title": "Christ-Centered Unity",
+    "description": "President Uchtdorf teaches how we can become united in Christ as a community of Saints.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/51uchtdorf?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/u995avdh830m32qrgpicjtd4qle6ngf4ulr0kwvv/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Andrea Muñoz Spannaus",
+    "title": "God Is at Your Side",
+    "description": "Drawing inspiration from the thirteenth article of faith, Sister Spannaus invites young women to create a list of aspirations, testifying that the Lord will guide and help them.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/52munoz-spannaus?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/38rn01t5f2utscuf9h96ig6cqsu83efe9nfqt3mj/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Managing Mental and Emotional Health",
+      "url": "https://www.churchofjesuschrist.org/life/managing-mental-and-emotional-health?lang=eng"
+     },
+     {
+      "title": "Developing Healthy Habits for Growth",
+      "url": "https://www.churchofjesuschrist.org/life/developing-habits-for-growth?lang=eng"
+     },
+     {
+      "title": "Media Safety",
+      "url": "https://www.churchofjesuschrist.org/study/manual/media-safety?lang=eng"
+     },
+     {
+      "title": "Physical Health",
+      "url": "https://www.churchofjesuschrist.org/life/physical-health?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Moisés Villanueva",
+    "title": "“Prove Me Now Herewith”",
+    "description": "Elder Villanueva teaches that the Lord will bless us in subtle but significant ways when we obey the law of tithing.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/53villanueva?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/3zyl2ksn9gbshhmtabj6472elzz2winljtx48gdo/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Finances",
+      "url": "https://www.churchofjesuschrist.org/life/finances?lang=eng"
+     },
+     {
+      "title": "Self-Reliance",
+      "url": "https://www.churchofjesuschrist.org/life/self-reliance?lang=eng"
+     },
+     {
+      "title": "Employment Services",
+      "url": "https://www.churchofjesuschrist.org/life/employment-services?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "David A. Bednar",
+    "title": "Sealed by the Holy Spirit of Promise",
+    "description": "Elder Bednar teaches about the importance of ordinances and covenants in our journey back to our Heavenly Father.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/54bednar?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/vj885yy3parnhlv5moyd771cpwt48zvi48c2ziku/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Divorce",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/divorce?lang=eng"
+     },
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Thabo Lebethoa",
+    "title": "Jesus Christ Is the Light and Life of the World",
+    "description": "Elder Lebethoa teaches three ways that we can feel the Savior’s influence more in our lives.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/55lebethoa?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/onq0pqsfa1suj5rra9o470vfa7b5zfnneh3udcm0/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     },
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Paul H. Sinclair",
+    "title": "Quick to Help, Slow to Judge",
+    "description": "Elder Sinclair uses the story of Jesus and the woman at the well to encourage us to help and bless people rather than judging them.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/56sinclair?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/uln97f9omqe9xygkyzhn6pjurmpnxvqq8zu2kkmi/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Gary E. Stevenson",
+    "title": "Fruit to Make One Happy",
+    "description": "Elder Stevenson describes three fruits of the gospel of Jesus Christ and encourages children to share those fruits with others.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/57stevenson?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/4b5utix6yu5fr75fb3zdvvposqayrvavmf1dv262/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Death, Grieving, and Loss",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/death-physical?lang=eng"
+     },
+     {
+      "title": "Hope",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/hope?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Gabriel W. Reid",
+    "title": "You Are Good Enough to Teach",
+    "description": "Brother Reid testifies that loving the Lord and loving those we teach is at the heart of gospel teaching.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/58reid?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/2qszi596lzxgfolm0u8pge57hr17kpuziu6z1wi4/full/%21200%2C/0/default",
+    "life_topics": []
+   },
+   {
+    "speaker": "Clark G. Gilbert",
+    "title": "Teach Truth with Love",
+    "description": "Elder Gilbert teaches about showing love to our neighbors while standing firm in our testimony of truth.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/59gilbert?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/j0vwgu442szfuomk3t85sj1dwz7ek3jj0015cajq/full/%21200%2C/0/default",
+    "life_topics": [
+     {
+      "title": "Building Healthy Relationships",
+      "url": "https://www.churchofjesuschrist.org/life/building-healthy-relationships?lang=eng"
+     },
+     {
+      "title": "Family Relationships",
+      "url": "https://www.churchofjesuschrist.org/study/manual/family/family?lang=eng"
+     }
+    ]
+   },
+   {
+    "speaker": "Dallin H. Oaks",
+    "title": "Closing Remarks",
+    "description": "President Oaks teaches us to focus on the Savior’s teachings, invites us to study the conference messages, and welcomes the world to the upcoming Salt Lake Temple Celebration.",
+    "href": "https://www.churchofjesuschrist.org/study/general-conference/2026/10/510oaks?lang=eng",
+    "img": "https://www.churchofjesuschrist.org/imgs/zqwc0bef0te4p9vpyqsl6iz0petobt4qqqu6eebf/full/%21200%2C/0/default",
+    "life_topics": []
+   }
+  ]
+ }
+];
+
+function escapeHtml(str) {
+  return str
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderLifeTopics(topics) {
+  if (!topics || !topics.length) return '';
+  const links = topics.map(t => `<a href="${t.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(t.title)}</a>`).join(' | ');
+  return `<div class="life-help"><strong>Relevant Life Helps:</strong> ${links}</div>`;
+}
+
+function renderTile(item, isSessionCard = false) {
+  const speaker = item.speaker ? `<p class="speaker">${escapeHtml(item.speaker)}</p>` : '';
+  const titleLink = item.href
+    ? `<a href="${item.href}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>`
+    : escapeHtml(item.title);
+  return `
+    <article class="tile ${isSessionCard ? 'session-card' : ''}">
+      <div class="image-wrap">
+        <img src="${item.img || ''}" alt="${escapeHtml(item.title)}" loading="lazy">
+      </div>
+      <div class="content">
+        ${speaker}
+        <h3 class="talk-title">${titleLink}</h3>
+        <p class="description">${escapeHtml(item.description)}</p>
+        ${renderLifeTopics(item.life_topics)}
+      </div>
+    </article>
+  `;
+}
+
+function render() {
+  const app = document.getElementById('app');
+  let html = `<a class="back-link" href="../">&larr; All conferences</a><h1 class="page-title">${escapeHtml(pageTitle)}</h1>`;
+  conferenceData.forEach(section => {
+    html += `
+      <section class="session">
+        <div class="session-label">Session</div>
+        <h2 class="session-title">${escapeHtml(section.session)}</h2>
+        ${renderTile(section.items[0], true)}
+        ${section.items.slice(1).map(item => renderTile(item)).join('')}
+      </section>
+    `;
+  });
+  html += `<p class="footer-note">${escapeHtml(footerNote)}</p>`;
+  app.innerHTML = html;
+}
+
+render();
+</script>
+</body>
+</html>
